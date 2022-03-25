@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Wedding Invitation</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=750 height=1334 style="width: 750px; height: 1334px; background: #000000"></canvas>
+    <script src="Build/dkWedding.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/dkWedding.data",
+        frameworkUrl: "Build/dkWedding.framework.js",
+        codeUrl: "Build/dkWedding.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Dom Cogan",
+        productName: "Wedding Invitation",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
